@@ -1,0 +1,12 @@
+sources:
+  - name: dbt_log_source
+    database: dbt_log  
+    schema: source  
+    tables:
+      - name: fact_sales
+
+      - name: dim_customer
+      - name: dim_product
+      - name: fact_returns
+      - name: dim_store
+      - name: dim_date

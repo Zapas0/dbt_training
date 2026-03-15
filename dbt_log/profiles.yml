@@ -1,0 +1,11 @@
+dbt_log:
+  outputs:
+    dev:
+      catalog: dbt_log
+      host: dbc-bada97ad-0934.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/c21e448fe7436f66
+      schema: default
+      threads: 1
+      token: dapib3d20eb321a2b913fcd31f4ea49b00ee
+      type: databricks
+  target: dev

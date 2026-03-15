@@ -1,0 +1,24 @@
+models: # config level
+    - name : bronze_customer
+      config:
+        materialized: table
+
+    - name : bronze_products
+      config:
+        materialized: table
+      columns: 
+        - name : list_price
+          data_tests:
+            - not_null
+            - non_negative
+    - name : bronze_store
+      columns:
+        - name : store_sk
+          data_tests:
+            - not_null
+            - unique
+        - name : store_name
+          data_tests:
+            - accepted_values:
+                arguments:
+                  values: ["MegaMart Manhattan", "MegaMart Brooklyn", "MegaMart Austin","MegaMart San Jose","MegaMart Toronto"]
