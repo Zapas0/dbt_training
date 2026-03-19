@@ -35,4 +35,7 @@ models:
     bronze:
       +materialized: table #view , incremental , table
       +schema : bronze
- 
+
+seeds:
+  dbt_log:
+    +schema : bronze
